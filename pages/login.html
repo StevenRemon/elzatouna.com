@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ELZATOUNA</title>
+    <link rel="stylesheet" href="../css/login.css">  <!-- ✅ تصحيح المسار -->
+    <script defer src="../js/login.js"></script>    <!-- ✅ تصحيح المسار -->
+</head>
+<body>
+
+    <!-- ✅ Login Form -->
+    <div class="login-container">
+        <img src="../assets/elzatouna logo.jpg" alt="ELZATOUNA Logo" class="logo"> <!-- ✅ إضافة اللوجو -->
+        <h2>Login to <span class="highlight">ELZATOUNA</span></h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+</body>
+</html>
