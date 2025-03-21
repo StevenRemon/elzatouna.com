@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests | ELZATOUNA</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tests.css">
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/tests.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/elzatouna logo.jpg" alt="ELZATOUNA Logo" class="logo">
+                <span class="site-name">ELZATOUNA</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+        </ul>
+        <a id="accountLink" href="pages/profile.html">
+            <button id="accountBtn">👤 Profile</button>
+        </a>
+    </nav>
+
+    <!-- ✅ Drawer للهواتف فقط -->
+    <div class="drawer" id="drawer">
+        <div class="close-icon" onclick="toggleDrawer()">×</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+            <li>
+                <a id="accountLinkDrawer" href="pages/profile.html">
+                    <button id="accountBtnDrawer">👤 Profile</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ✅ Tests Section -->
+    <section class="tests">
+        <h2>Our Tests</h2>
+        <div class="tests-container">
+            <div class="test">
+                <img src="../assets/test1.jpg" alt="Test 1">
+                <h3>Test 1</h3>
+                <p>Description of Test 1.</p>
+                <button class="require-login">Start Test</button>
+            </div>
+            <div class="test">
+                <img src="../assets/test2.jpg" alt="Test 2">
+                <h3>Test 2</h3>
+                <p>Description of Test 2.</p>
+                <button class="require-login">Start Test</button>
+            </div>
+            <div class="test">
+                <img src="../assets/test3.jpg" alt="Test 3">
+                <h3>Test 3</h3>
+                <p>Description of Test 3.</p>
+                <button class="require-login">Start Test</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>© 2025 ELZATOUNA. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

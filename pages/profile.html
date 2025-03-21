@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | ELZATOUNA</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/profile.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/elzatouna logo.jpg" alt="ELZATOUNA Logo" class="logo">
+                <span class="site-name">ELZATOUNA</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+        </ul>
+        <a id="accountLink" href="../pages/profile.html">
+            <button id="accountBtn">👤 Profile</button>
+        </a>
+    </nav>
+
+    <!-- ✅ Drawer للهواتف فقط -->
+    <div class="drawer" id="drawer">
+        <div class="close-icon" onclick="toggleDrawer()">×</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+            <li>
+                <a id="accountLinkDrawer" href="../pages/profile.html">
+                    <button id="accountBtnDrawer">👤 Profile</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ✅ Profile Section -->
+    <section class="profile">
+        <div class="profile-header">
+            <h1>Welcome, <span id="userName"></span>!</h1>
+            <p>Manage your profile and settings here.</p>
+        </div>
+
+        <div class="profile-content">
+            <!-- ✅ معلومات المستخدم -->
+            <div class="user-info card">
+                <h2>User Information</h2>
+                <div class="info-item"><strong>Email:</strong> <span id="userEmail"></span></div>
+                <div class="info-item"><strong>Username:</strong> <span id="userUsername"></span></div>
+                <div class="info-item"><strong>Joined:</strong> <span id="userJoined"></span></div>
+            </div>
+
+            <!-- ✅ الإعدادات -->
+            <div class="settings card">
+                <h2>Settings</h2>
+                <div class="setting-option">
+                    <label for="darkMode">Dark Mode:</label>
+                    <input type="checkbox" id="darkMode" name="darkMode">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>© 2025 ELZATOUNA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // ✅ منع إعادة تحميل الصفحة إذا كان المستخدم بالفعل في صفحة البروفايل
+        document.getElementById("accountLink").addEventListener("click", function(event) {
+            if (window.location.pathname.includes("profile.html")) {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+            }
+        });
+
+        document.getElementById("accountLinkDrawer").addEventListener("click", function(event) {
+            if (window.location.pathname.includes("profile.html")) {
+                event.preventDefault(); // منع إعادة تحميل الصفحة
+            }
+        });
+    </script>
+
+</body>
+</html>
