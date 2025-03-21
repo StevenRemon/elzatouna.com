@@ -1,0 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedIn"));
+    console.log("Logged In User:", loggedInUser); // ✅ تحقق من بيانات المستخدم
+
+    if (!loggedInUser) {
+        console.log("No user logged in, redirecting to login page...");
+        window.location.href = "pages/login.html";
+        return;
+    }
+
+    console.log("Loading user data into profile...");
+    document.getElementById("userName").textContent = loggedInUser.fullname;
+    document.getElementById("userEmail").textContent = loggedInUser.email;
+    document.getElementById("userUsername").textContent = loggedInUser.username;
+    document.getElementById("userJoined").textContent = new Date().toLocaleDateString();
+});
