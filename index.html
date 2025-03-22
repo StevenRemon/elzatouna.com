@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | ELZATOUNA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/elzatouna logo.jpg" alt="ELZATOUNA Logo" class="logo">
+                <span class="site-name">ELZATOUNA</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/courses.html">Courses</a></li>
+            <li><a href="pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="pages/dashboard.html" class="require-login">Dashboard</a></li>
+        </ul>
+        <a id="accountLink" href="pages/profile.html">
+            <button id="accountBtn">👤 Profile</button>
+        </a>
+    </nav>
+
+    <div class="drawer" id="drawer">
+        <div class="close-icon" onclick="toggleDrawer()">×</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/courses.html">Courses</a></li>
+            <li><a href="pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="pages/dashboard.html" class="require-login">Dashboard</a></li>
+            <li>
+                <a id="accountLinkDrawer" href="pages/profile.html">
+                    <button id="accountBtnDrawer">👤 Profile</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <header class="hero">
+        <div id="welcomeMessage" class="welcome-message"></div>
+        <h1>Welcome to <span class="highlight">ELZATOUNA</span></h1>
+        <p>Your interactive learning journey starts here.</p>
+        <button class="require-login">Start Learning</button>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <img src="assets/elzatouna logo.jpg" alt="Feature 1">
+                <h3>Interactive Learning</h3>
+                <p>Engage with dynamic lessons.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/elzatouna logo.jpg" alt="Feature 2">
+                <h3>Track Your Progress</h3>
+                <p>Monitor your learning journey.</p>
+            </div>
+            <div class="feature">
+                <img src="assets/elzatouna logo.jpg" alt="Feature 3">
+                <h3>Exclusive Content</h3>
+                <p>Access high-quality materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 ELZATOUNA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
