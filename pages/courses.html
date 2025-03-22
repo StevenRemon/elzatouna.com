@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | ELZATOUNA</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/courses.css">
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/courses.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/elzatouna logo.jpg" alt="ELZATOUNA Logo" class="logo">
+                <span class="site-name">ELZATOUNA</span>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+        </ul>
+        <a id="accountLink" href="./profile.html">
+            <button id="accountBtn">👤 Profile</button>
+        </a>
+    </nav>
+
+    <!-- ✅ Drawer للهواتف فقط -->
+    <div class="drawer" id="drawer">
+        <div class="close-icon" onclick="toggleDrawer()">×</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/courses.html">Courses</a></li>
+            <li><a href="../pages/tests.html" class="require-login">Tests</a></li>
+            <li><a href="../pages/dashboard.html" class="require-login">Dashboard</a></li>
+            <li>
+                <a id="accountLinkDrawer" href="./profile.html">
+                    <button id="accountBtnDrawer">👤 Profile</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ✅ Courses Section -->
+    <section class="courses require-login">
+        <h2>Our Courses</h2>
+        <div class="courses-container">
+            <div class="course">
+                <img src="../assets/course1.jpg" alt="Course 1">
+                <h3>Course 1</h3>
+                <p>Description of Course 1.</p>
+                <button class="require-login">Enroll Now</button>
+                <button class="view-details" data-course-id="1">View Details</button>
+            </div>
+            <div class="course">
+                <img src="../assets/course2.jpg" alt="Course 2">
+                <h3>Course 2</h3>
+                <p>Description of Course 2.</p>
+                <button class="require-login">Enroll Now</button>
+                <button class="view-details" data-course-id="2">View Details</button>
+            </div>
+            <div class="course">
+                <img src="../assets/course3.jpg" alt="Course 3">
+                <h3>Course 3</h3>
+                <p>Description of Course 3.</p>
+                <button class="require-login">Enroll Now</button>
+                <button class="view-details" data-course-id="3">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>© 2025 ELZATOUNA. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
